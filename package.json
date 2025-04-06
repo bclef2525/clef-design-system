@@ -1,0 +1,18 @@
+{
+  "name": "clef-design-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Clef Design System",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "pnpm --parallel -r dev",
+    "dev:core": "pnpm --filter @clef-design-system/core dev",
+    "dev:docs": "pnpm --filter @clef-design-system/docs storybook",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.7.1"
+}
