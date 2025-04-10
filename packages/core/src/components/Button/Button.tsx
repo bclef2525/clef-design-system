@@ -1,5 +1,6 @@
 import React from "react";
 import { ThemeContext } from "../../theme/ThemeProvider";
+import cx from "clsx";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -49,7 +50,13 @@ export const Button: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabledStyles} ${className}`}
+      className={cx(
+        baseStyles,
+        variantStyles[variant],
+        sizeStyles[size],
+        disabledStyles,
+        className
+      )}
       disabled={disabled || isLoading}
       {...props}
     >
