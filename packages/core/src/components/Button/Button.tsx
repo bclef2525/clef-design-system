@@ -46,7 +46,9 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const disabledStyles =
-    disabled || isLoading ? "opacity-60 cursor-not-allowed" : "";
+    disabled || isLoading
+      ? "opacity-60 cursor-not-allowed hover:bg-transparent active:bg-transparent"
+      : "";
 
   return (
     <button
